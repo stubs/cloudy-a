@@ -9,8 +9,8 @@ from darksky.api import DarkSky
 from gpiozero import RGBLED
 
 DARK_SKY_API = ""
-LAT = ''
-LONG = ''
+LAT = 0.0
+LONG = 0.0
 
 
 # These are the different animations for the LED-strips:
