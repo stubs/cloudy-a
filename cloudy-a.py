@@ -77,7 +77,7 @@ weather_dict = {'clear-day': sun,
 def main_loop():
     pi_led = RGBLED(17, 22, 24)
     darksky = DarkSky(DARK_SKY_API)
-    forecast = darksky(LAT, LONG).currently.icon
+    forecast = darksky.get_forecast(LAT, LONG).currently.icon
     if weather_dict.get(forecast):
         weather_dict[forecast](pi_led)
     else:
