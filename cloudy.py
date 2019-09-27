@@ -60,17 +60,17 @@ def unknown_icon(led):
         time.sleep(1)
 
 
-weather_dict = {'clear-day': sun,
-                'clear-night': sun,
-                'cloudy': cloud,
-                'fog': cloud,
-                'partly-cloudy-day': cloud,
-                'partly-cloudy-night': cloud,
-                'rain': rain,
-                'sleet': snow,
-                'snow': snow,
-                'unknown_icon': unknown_icon,
-                'wind': sun}
+weather_dict = {"clear-day": sun,
+                "clear-night": sun,
+                "cloudy": cloud,
+                "fog": cloud,
+                "partly-cloudy-day": cloud,
+                "partly-cloudy-night": cloud,
+                "rain": rain,
+                "sleet": snow,
+                "snow": snow,
+                "unknown_icon": unknown_icon,
+                "wind": sun}
 
 
 def main_loop():
@@ -80,12 +80,12 @@ def main_loop():
     if weather_dict.get(forecast):
         weather_dict[forecast](pi_led)
     else:
-        weather_dict['unknown_icon']()
+        weather_dict["unknown_icon"]()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         main_loop()
     except KeyboardInterrupt:
-        print('\nExiting by user request.\n')
+        print("\nExiting by user request.\n")
         sys.exit(0)
