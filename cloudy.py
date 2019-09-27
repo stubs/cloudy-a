@@ -8,7 +8,7 @@ from colorzero import Color
 from darksky.api import DarkSky
 from gpiozero import RGBLED
 
-DARK_SKY_API = ""
+DARK_SKY_API = "YOUR_API_KEY"       # https://darksky.net/dev/register  < -- get your own api key
 LAT = 0.0
 LONG = 0.0
 
