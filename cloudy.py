@@ -62,16 +62,15 @@ def unknown_icon(led):
 
 weather_dict = {'clear-day': sun,
                 'clear-night': sun,
-                'rain': rain,
-                'snow': snow,
-                'sleet': snow,
-                'wind': sun,
-                'fog': cloud,
                 'cloudy': cloud,
+                'fog': cloud,
                 'partly-cloudy-day': cloud,
                 'partly-cloudy-night': cloud,
-                'unknown_icon': unknown_icon
-                }
+                'rain': rain,
+                'sleet': snow,
+                'snow': snow,
+                'unknown_icon': unknown_icon,
+                'wind': sun}
 
 
 def main_loop():
