@@ -122,7 +122,7 @@ def main_loop():
     if weather_dict.get(forecast):
         weather_dict[forecast](pi_led)
     else:
-        weather_dict["unknown_icon"]()
+        weather_dict["unknown_icon"](pi_led)
 
 
 if __name__ == "__main__":
