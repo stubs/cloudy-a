@@ -12,6 +12,7 @@ requests = "*"
 gpiozero = "*"
 colorzero = "*"
 darksky-weather = "*"
+pigpio = "*"
 
 [requires]
 python_version = "3.7"
