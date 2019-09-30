@@ -6,6 +6,12 @@
 A refactor of [DJAckbar's Cloudy-a](https://github.com/DJAkbar/cloudy-a) script for LED light animations according to the weather forecast. 
 For an example see [Youtube](https://www.youtube.com/watch?v=DNXssI4LuMc).
 
+
+#### Setup:
++ Ensure that pigpio is is up and running
+`sudo pigpiod` will start the service
++ [Consider Cron for scheduling on the Raspberry Pi](https://www.raspberrypi.org/documentation/linux/usage/cron.md)
+
 #### Helpful links:
 + [Setting up the RPI and LED Strip](https://dordnung.de/raspberrypi-ledstrip/)
 + [Dark Sky API](https://darksky.net/dev/login?next=/account)
