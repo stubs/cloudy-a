@@ -8,7 +8,7 @@ For an example see [Youtube](https://www.youtube.com/watch?v=DNXssI4LuMc).
 
 
 #### Setup:
-+ Ensure that pigpio is is up and running
++ Ensure that pigpio is up and running
 `sudo pigpiod` will start the service
 + [Consider Cron for scheduling on the Raspberry Pi](https://www.raspberrypi.org/documentation/linux/usage/cron.md)
 
