@@ -9,6 +9,7 @@ import time
 from colorzero import Color
 from darksky.api import DarkSky
 from gpiozero import RGBLED
+from gpiozero.pins.pigpio import PiGPIOFactory
 
 DARK_SKY_API = "YOUR_API_KEY"  # https://darksky.net/dev/register
 LAT = 0.0
@@ -124,7 +125,7 @@ def main_loop():
         filename=PurePath(Path.home()).joinpath("logs/cloud.log"), level=logging.DEBUG
     )
 
-    pi_led = RGBLED(17, 27, 24)
+    pi_led = RGBLED(red=17, green=27, blue=24, pin_factory=PiGPIOFactory())
     darksky = DarkSky(DARK_SKY_API)
     forecast = darksky.get_forecast(LAT, LONG).currently.icon
     if weather_dict.get(forecast):
