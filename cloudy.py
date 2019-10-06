@@ -1,5 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+import logging
+from pathlib import Path, PurePath
 import random
 import sys
 import time
@@ -116,13 +118,22 @@ weather_dict = {
 
 
 def main_loop():
-    pi_led = RGBLED(17, 22, 24)
+
+    # log in home dir
+    logging.basicConfig(
+        filename=PurePath(Path.home()).joinpath("logs/cloud.log"), level=logging.DEBUG
+    )
+
+    pi_led = RGBLED(17, 27, 24)
     darksky = DarkSky(DARK_SKY_API)
     forecast = darksky.get_forecast(LAT, LONG).currently.icon
     if weather_dict.get(forecast):
+        logging.info("Icon: {}".format(forecast))
         weather_dict[forecast](pi_led)
     else:
+        logging.warning("Icon: {}".format(forecast))
         weather_dict["unknown_icon"](pi_led)
+    pi_led.off()
 
 
 if __name__ == "__main__":
